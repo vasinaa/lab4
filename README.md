@@ -165,6 +165,29 @@ $ gist REPORT.md
 Создайте `CMakeList.txt` в директории [formatter_lib](formatter_lib),
 с помощью которого можно будет собирать статическую библиотеку *formatter*.
 
+```-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/alexandra/lab03/formatter_lib/_build
+Scanning dependencies of target formatter_lib
+[ 50%] Building CXX object CMakeFiles/formatter_lib.dir/formatter.cpp.o
+[100%] Linking CXX static library libformatter_lib.a
+[100%] Built target formatter_lib
+```
+
 ### Задание 2
 У компании "Formatter Inc." есть перспективная библиотека,
 которая является расширением предыдущей библиотеки. Т.к. вы уже овладели
