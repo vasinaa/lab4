@@ -223,6 +223,37 @@ Scanning dependencies of target formatter_ex_lib
 вам необходимо создать два `CMakeList.txt` для двух простых приложений:
 * *hello_world*, которое использует библиотеку *formatter_ex*;
 * *solver*, приложение которое испольует статические библиотеки *formatter_ex* и *solver_lib*.
+```
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/alexandra/lab03/hello_world_application/_build
+Scanning dependencies of target formatter_lib
+[ 16%] Building CXX object CMakeFiles/formatter_lib.dir/home/alexandra/lab03/formatter_lib/formatter.cpp.o
+[ 33%] Linking CXX static library libformatter_lib.a
+[ 33%] Built target formatter_lib
+Scanning dependencies of target formatter_ex_lib
+[ 50%] Building CXX object CMakeFiles/formatter_ex_lib.dir/home/alexandra/lab03/formatter_ex_lib/formatter_ex.cpp.o
+[ 66%] Linking CXX static library libformatter_ex_lib.a
+[ 66%] Built target formatter_ex_lib
+Scanning dependencies of target hello_world_application
+[ 83%] Building CXX object CMakeFiles/hello_world_application.dir/hello_world.cpp.o
+[100%] Linking CXX executable hello_world_application
+[100%] Built target hello_world_application
+```
 
 **Удачной стажировки!**
 
