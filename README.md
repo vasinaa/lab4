@@ -194,7 +194,29 @@ Scanning dependencies of target formatter_lib
 навыком созданием `CMakeList.txt` для статической библиотеки *formatter*, ваш 
 руководитель поручает заняться созданием `CMakeList.txt` для библиотеки 
 *formatter_ex*, которая в свою очередь использует библиотеку *formatter*.
-
+```
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/alexandra/lab03/formatter_ex_lib/_build
+Scanning dependencies of target formatter_ex_lib
+[ 50%] Building CXX object CMakeFiles/formatter_ex_lib.dir/formatter_ex.cpp.o
+[100%] Linking CXX static library libformatter_ex_lib.a
+[100%] Built target formatter_ex_lib
+```
 ### Задание 3
 Конечно же ваша компания предоставляет примеры использования своих библиотек.
 Чтобы продемонстрировать как работать с библиотекой *formatter_ex*,
