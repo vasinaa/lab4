@@ -1,4 +1,4 @@
-## Laboratory work III
+## Laboratory work III Васина Александра ИУ8-22
 
 Представьте, что вы стажер в компании "Formatter Inc.".
 ### Задание 1
