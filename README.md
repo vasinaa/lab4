@@ -100,9 +100,16 @@ Scanning dependencies of target formatter_ex_lib
 вам необходимо создать два `CMakeList.txt` для двух простых приложений:
 * *hello_world*, которое использует библиотеку *formatter_ex*;
 * *solver*, приложение которое испольует статические библиотеки *formatter_ex* и *solver_lib*.
+1. Создаём CMakeLists.txt для hello_world в директории ~/hello_world_application
 ```
 cd ./hello_world_application
 vim CMakeLists.txt
+```
+2. Собираем файл hello_world
+
+```
+ cmake -H. -B_build && cmake --build _build
+
 ```
 ```
 cmake_minimum_required(VERSION 3.4)
@@ -147,10 +154,26 @@ Scanning dependencies of target hello_world_application
 [100%] Linking CXX executable hello_world_application
 [100%] Built target hello_world_application
 ```
+3. Перемещаемся в директорию ~/solver_lib и создаём CMakeLists.txt для статической библиотеки solver
 ```
-cd ./solver_application
+cd ../solver_lib
 vim CMakeLists.txt
+
 ```
+```
+cmake_minimum_required(VERSION 3.4)
+project(solver_lib)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_library(formatter STATIC ${CMAKE_CURRENT_SOURCE_DIR}/solver.h ${CMAKE_CURRENT_DIR}/solver.cpp)
+```
+
+
+4. Собираем библиотеку solver
+```
+$ cmake -H. -B_build && cmake --build _build
+```
+
 ```
 cmake_minimum_required(VERSION 3.4)
 project(hello_world_application)
@@ -162,6 +185,31 @@ add_library(formatter_lib STATIC "../formatter_lib/formatter.cpp")
 add_library(formatter_ex_lib STATIC "../formatter_ex_lib/formatter_ex.cpp")
 add_executable (hello_world_application "hello_world.cpp")
 target_link_libraries(hello_world_application formatter_ex_lib formatter_lib)
+```
+5. Перемещаемся в директорию ~/solver_application и создаём CMakeLists.txt для исполняемого файла solver_app
+
+```cd ../solver_application
+vim CMakeLists.txt
+
+```
+```
+cmake_minimum_required(VERSION 3.4)
+project(solver_application)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+include_directories("../formatter_lib")
+include_directories("../formatter_ex_lib")
+include_directories("../solver_lib")
+add_library(formatter_lib STATIC "../formatter_lib/formatter.cpp")
+add_library(formatter_ex_lib STATIC "../formatter_ex_lib/formatter_ex.cpp")
+add_library(solver_lib STATIC "../solver_lib/solver.cpp")
+add_executable(solver_application "equation.cpp")
+target_link_libraries(solver_application solver_lib formatter_ex_lib formatter_lib)
+```
+6. Собираем файл solver_app
+
+```
+cmake -H. -B_build && cmake --build _build
 ```
 ```
 - The C compiler identification is GNU 9.4.0
