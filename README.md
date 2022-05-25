@@ -1,5 +1,5 @@
-## Laboratory work III Васина Александра ИУ8-22
-
+## Laboratory work 4 Васина Александра ИУ8-22
+[![CI](https://github.com/vasinaa/lab4/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/vasinaa/lab4/actions/workflows/main.yml)
 Представьте, что вы стажер в компании "Formatter Inc.".
 ### Задание 1
 Вам поручили перейти на систему автоматизированной сборки **CMake**.
