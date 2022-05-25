@@ -8,7 +8,7 @@
 
   1.   Создаём директорию [.github/workflows](.github/workflows) и добавляем в неё файл actions.yml:
   
-   ```
+   
    
     name: cmake_build
     on:
@@ -52,7 +52,7 @@
 	        cmake --build _build
 	      shell: bash
 	      working-directory: lab4/solver_application
-          ```
+         
           2. [![CI](https://github.com/vasinaa/lab4/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/vasinaa/lab4/actions/workflows/main.yml)
 
 
