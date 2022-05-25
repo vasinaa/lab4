@@ -1,5 +1,5 @@
 ## Laboratory work 4 Васина Александра ИУ8-22
-[![CI](https://github.com/vasinaa/lab4/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/vasinaa/lab4/actions/workflows/main.yml)
+
 Вы продолжаете проходить стажировку в "Formatter Inc.".
 В прошлый раз ваше задание заключалось в настройке автоматизированной системы CMake.
 
@@ -53,8 +53,7 @@
 	      shell: bash
 	      working-directory: lab4/solver_application
          
-          2. [![CI](https://github.com/vasinaa/lab4/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/vasinaa/lab4/actions/workflows/main.yml)
-
+          2. 
 
 
 
