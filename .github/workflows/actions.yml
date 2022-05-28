@@ -1,7 +1,7 @@
-name: cmake
+name: cmake_test
 
 on:
-  #push:
+  push:
   #branches: [ master ]
   workflow_dispatch:
   
